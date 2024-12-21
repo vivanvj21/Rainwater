@@ -1,25 +1,35 @@
- {% extends "template.html" %}
- {% block content %}
-  <html>
-  <head>
-  	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dash_style.css') }}">
-  	<style type="text/css">
-  		.cent {
-  			margin-top: 75px;
-			margin-left: 75px;
-  		}
-  	</style>
+{% extends "template.html" %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dash_style.css') }}">
+    <style type="text/css">
+        /* Custom Styling for the Content */
+        .cent {
+            margin-top: 75px;
+            margin-left: 75px;
+        }
+    </style>
 </head>
-<body style="background-color: ">
-	<div class="container">
-		<div class="col-md-8 cent">
-		    <div id="pieChart"></div>
-		    <div id="barChart"></div>  
-		    <div id="lineChart"></div>
-		</div>
-	</div>
-	<script src="{{ url_for('static', filename='js/d3.js') }}"></script>
+
+<body style="background-color: #f4f4f4;"> <!-- Background color can be customized -->
+    <div class="container">
+        <div class="col-md-8 cent">
+            <!-- Charts to display -->
+            <div id="pieChart"></div>
+            <div id="barChart"></div>  
+            <div id="lineChart"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="{{ url_for('static', filename='js/d3.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/dash_script.js') }}"></script>
- </body>
- </html>
+</body>
+</html>
 {% endblock content %}

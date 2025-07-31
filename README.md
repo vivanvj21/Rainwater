@@ -1,4 +1,4 @@
-# SIH-RainWater-Harvesting
+RainWater-Harvesting
 SIH submission for GoldMan Sachs' problem statement at NIT Calicut. 
 - At this time, the entire project is ready to be deployed and runs on a Flask middle-tier. All values are real-time satellite images obtained from Google Maps API for the rooftop detection and estimation.   
 - The machine learning aspect of our project was used to estimate the dimensions of the roof (`OpenCV` and `Computer Vision Models`) along with rainfall estimation using a rolling forecasting model. 
